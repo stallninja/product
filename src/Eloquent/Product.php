@@ -7,14 +7,8 @@ use Illuminate\Database\Eloquent\Model as Entity;
 
 class Product extends Entity implements ProductInterface
 {
-    /**
-     * @var string
-     */
     protected $table = 'products';
 
-    /**
-     * @return Collection
-     */
     public function variants()
     {
         return $this->hasMany(app('StallNinja\Product\Eloquent\Variant'));
@@ -27,7 +21,7 @@ class Product extends Entity implements ProductInterface
 
     public function attributes()
     {
-        return $this->hasMany(config('stallninja.product.models.attribute'));
+        return $this->hasMany(app('StallNinja\Product\Eloquent\Attribute'));
     }
 
     public function hasAttributes()
@@ -37,7 +31,7 @@ class Product extends Entity implements ProductInterface
 
     public function options()
     {
-        return $this->hasMany(config('stallninja.product.models.option'));
+        return $this->hasMany(app('StallNinja\Product\Eloquent\Option'));
     }
 
     public function hasOptions()

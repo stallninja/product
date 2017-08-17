@@ -11,11 +11,11 @@ class Variant extends Entity implements VariantInterface
 
     public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(app('StallNinja\Product\Eloquent\Product'));
     }
 
     public function optionValues()
     {
-        return $this->hasMany(OptionValue::class);
+        return $this->hasMany(app('StallNinja\Product\Eloquent\OptionValue'));
     }
 }

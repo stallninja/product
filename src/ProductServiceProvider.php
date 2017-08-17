@@ -29,23 +29,19 @@ class ProductServiceProvider extends ServiceProvider
         );
         $this->app->bind(
             'StallNinja\Product\Eloquent\Variant',
-            config('stallninja.product.models.variant')
+            Eloquent\Variant::class
         );
         $this->app->bind(
             'StallNinja\Product\Eloquent\Attribute',
-            config('stallninja.product.models.attribute')
+            Eloquent\Attribute::class
         );
         $this->app->bind(
             'StallNinja\Product\Eloquent\Option',
-            config('stallninja.product.models.option')
-        );
-        $this->app->bind(
-            'StallNinja\Product\Eloquent\AttributeValue',
-            config('stallninja.product.models.value.attribute')
+            Eloquent\Option::class
         );
         $this->app->bind(
             'StallNinja\Product\Eloquent\OptionValue',
-            config('stallninja.product.models.value.option')
+            Eloquent\OptionValue::class
         );
     }
 
@@ -61,7 +57,6 @@ class ProductServiceProvider extends ServiceProvider
             'StallNinja\Product\Eloquent\Variant',
             'StallNinja\Product\Eloquent\Attribute',
             'StallNinja\Product\Eloquent\Option',
-            'StallNinja\Product\Eloquent\AttributeValue',
             'StallNinja\Product\Eloquent\OptionValue'
         ];
     }

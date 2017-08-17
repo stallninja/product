@@ -11,6 +11,6 @@ class Option extends Entity implements OptionInterface
 
     public function values()
     {
-        $this->hasMany(OptionValue::class);
+        $this->hasMany(app('StallNinja\Product\Eloquent\OptionValue'));
     }
 }
