@@ -33,7 +33,6 @@ class Product extends Entity implements ProductInterface
         'name',
         'description',
         'sku',
-        'enabled',
     ];
 
     /**
@@ -42,7 +41,7 @@ class Product extends Entity implements ProductInterface
     * @var array
     */
     protected $casts = [
-        'enabled' => 'boolean',
+        'active' => 'boolean',
     ];
 
     /**
