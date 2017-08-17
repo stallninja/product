@@ -22,7 +22,7 @@ class Product extends Entity implements ProductInterface
      *
      * @var bool
      */
-    public $timestamps = false;
+    public $timestamps = true;
 
     /**
     * The attributes that are mass assignable.
