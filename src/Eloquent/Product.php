@@ -2,12 +2,12 @@
 
 namespace StallNinja\Product\Eloquent;
 
-use Illuminate\Database\Eloquent\Model as Entity;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Collection;
 use StallNinja\Product\Contracts\Product as ProductInterface;
 
-class Product extends Entity implements ProductInterface
+class Product extends Model implements ProductInterface
 {
     use SoftDeletes;
 
