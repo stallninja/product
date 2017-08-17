@@ -4,6 +4,7 @@ namespace StallNinja\Product\Eloquent;
 
 use Illuminate\Database\Eloquent\Model as Entity;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Collection;
 use StallNinja\Product\Contracts\Product as ProductInterface;
 
 class Product extends Entity implements ProductInterface
@@ -56,32 +57,50 @@ class Product extends Entity implements ProductInterface
         'available_on',
     ];
 
-    public function variants()
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function variants() : Collection
     {
         return $this->hasMany(app('StallNinja\Product\Eloquent\Variant'));
     }
 
-    public function hasVariants()
+    /**
+     * @return bool
+     */
+    public function hasVariants() : bool
     {
         return !$this->variants()->isEmpty();
     }
 
-    public function attributes()
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function attributes() : Collection
     {
         return $this->hasMany(app('StallNinja\Product\Eloquent\Attribute'));
     }
 
-    public function hasAttributes()
+    /**
+     * @return bool
+     */
+    public function hasAttributes() : bool
     {
         return !$this->attributes()->isEmpty();
     }
 
-    public function options()
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function options() : Collection
     {
         return $this->hasMany(app('StallNinja\Product\Eloquent\Option'));
     }
 
-    public function hasOptions()
+    /**
+     * @return bool
+     */
+    public function hasOptions() : bool
     {
         return !$this->options()->isEmpty();
     }
