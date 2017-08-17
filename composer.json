@@ -1,0 +1,59 @@
+{
+    "name": "stallninja/product",
+    "type": "library",
+    "description": "Product management",
+    "keywords": [
+        "stallninja",
+        "commerce",
+        "products",
+        "options",
+        "variants",
+        "attributes"
+    ],
+    "version": "0.1.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Milos Dakic",
+            "email": "milos@tsarholdings.com.au"
+        }
+    ],
+    "support": {
+        "email": "code@tsarholdings.com.au",
+        "issues": "https://github.com/stallninja/product/issues",
+        "source": "https://github.com/stallninja/product"
+    },
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "^5.4",
+        "illuminate/database": "^5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StallNinja\\Product\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StallNinja\\Product\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "StallNinja\\Product\\ProductServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+}
