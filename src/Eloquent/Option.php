@@ -13,7 +13,7 @@ class Option extends Model implements OptionInterface
      *
      * @var string
      */
-    protected $table = "product_options";
+    protected $table = 'product_options';
 
     /**
      * Indicates if the model should be timestamped.

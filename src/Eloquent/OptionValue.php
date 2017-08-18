@@ -12,5 +12,5 @@ class OptionValue extends Model implements OptionValueInterface
      *
      * @var string
      */
-    protected $table = "product_option_values";
+    protected $table = 'product_option_values';
 }

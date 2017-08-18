@@ -3,8 +3,8 @@
 namespace StallNinja\Product\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use StallNinja\Product\Contracts\Product as ProductInterface;
 
 class Product extends Model implements ProductInterface
@@ -26,10 +26,10 @@ class Product extends Model implements ProductInterface
     public $timestamps = true;
 
     /**
-    * The attributes that are mass assignable.
-    *
-    * @var array
-    */
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'name',
         'description',
@@ -37,10 +37,10 @@ class Product extends Model implements ProductInterface
     ];
 
     /**
-    * The attributes that should be cast to native types.
-    *
-    * @var array
-    */
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
     protected $casts = [
         'active' => 'boolean',
     ];
@@ -70,7 +70,7 @@ class Product extends Model implements ProductInterface
      */
     public function hasVariants() : bool
     {
-        return !$this->variants()->isEmpty();
+        return ! $this->variants()->isEmpty();
     }
 
     /**
@@ -86,7 +86,7 @@ class Product extends Model implements ProductInterface
      */
     public function hasAttributes() : bool
     {
-        return !$this->attributes()->isEmpty();
+        return ! $this->attributes()->isEmpty();
     }
 
     /**
@@ -102,6 +102,6 @@ class Product extends Model implements ProductInterface
      */
     public function hasOptions() : bool
     {
-        return !$this->options()->isEmpty();
+        return ! $this->options()->isEmpty();
     }
 }

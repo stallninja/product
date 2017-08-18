@@ -2,10 +2,10 @@
 
 namespace StallNinja\Product\Eloquent;
 
+use Illuminate\Database\Eloquent\Model;
 use StallNinja\Product\Contracts\Attribute as AttributeInterface;
-use Illuminate\Database\Eloquent\Model as Entity;
 
-class Attribute extends Entity implements AttributeInterface
+class Attribute extends Model implements AttributeInterface
 {
-    protected $table = "product_attributes";
+    protected $table = 'product_attributes';
 }

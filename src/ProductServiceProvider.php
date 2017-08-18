@@ -57,7 +57,7 @@ class ProductServiceProvider extends ServiceProvider
             'StallNinja\Product\Eloquent\Variant',
             'StallNinja\Product\Eloquent\Attribute',
             'StallNinja\Product\Eloquent\Option',
-            'StallNinja\Product\Eloquent\OptionValue'
+            'StallNinja\Product\Eloquent\OptionValue',
         ];
     }
 }
