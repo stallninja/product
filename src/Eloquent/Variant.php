@@ -13,7 +13,7 @@ class Variant extends Model implements VariantInterface
      *
      * @var string
      */
-    protected $table = "product_variants";
+    protected $table = 'product_variants';
 
     /**
      * Indicates if the model should be timestamped.
